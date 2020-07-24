@@ -1,0 +1,67 @@
+1.- Entrar a su cuenta de GitHub y crear un repositorio llamado SegundoRepo
+2.- Clonar el repositorio SegundoRepo en su computadora, en la carpeta del curso
+        git clone  git clone https://github.com/gelizondot/SegundoRepo.git
+
+
+3.- Ingresar al repositorio usando cd SegundoRepo
+        SegundoRepo
+
+4.- Abrir el visual studio code. Escribir code .
+      code .
+
+5.- Crear los siguientes archivos:  alumno1.py, alumno2.py, alumno3.py, readme.md
+        touch alumno1.py alumno2.py alumno3.py readme.md
+
+6.- Poner en seguimiento unicamente los archivo .py
+     git add .py
+     fatal: pathspec '.py' did not match any files
+
+7.- Hacer un commit con el mensaje "add alumno 1,2,3"
+       $ git commit -m "add alumno 1,2,3"
+       [master d857eb5] add alumno 1,2,3
+       3 files changed, 0 insertions(+), 0 deletions(-)
+       create mode 100644 alumno1.py
+       create mode 100644 alumno2.py
+       create mode 100644 alumno3.py
+
+9.- Poner en seguimiento el archivo readme.md
+      git add readme.md
+
+10.-Hacer un commit con el mensaje "add readme"
+       $ git commit -m "add readme"
+    [master (root-commit) 337ded8] add readme
+     1 file changed, 0 insertions(+), 0 deletions(-)
+      create mode 100644 readme.md
+
+11.-Mostrar la historia del repositorio
+     $ git log
+commit d857eb5af3e3c49959a3586ba99c21118e32728c (HEAD -> master)
+Author: Gabriel Jose Elizondo Tijerina <gabo.elizondot@gmail.com>
+Date:   Wed Jul 22 16:06:13 2020 -0500
+
+    add alumno 1,2,3
+
+commit 337ded8320dd9df28687d86dec2f6acf8d27e83c
+Author: Gabriel Jose Elizondo Tijerina <gabo.elizondot@gmail.com>
+Date:   Wed Jul 22 16:42:10 2020 -0500
+
+    add readme
+
+12.-A los archivos .py agregar a cada uno de ellos en print("hola")
+13.-Prepara los cambios de los archivos y hacer commit con el mensaje "add saludo"
+     $ git add *.py
+     Gabriel Elizondo@DESKTOP-HGHRE3U MINGW64 ~/Desktop/Verano progra/SegundoRepo/SegundoRepo (master)
+     $ git commit -m "add saludo"
+      [master 20dd8c5] add saludo
+      3 files changed, 3 insertions(+)
+
+14.-Al archivo alumno3.py, agregarle el print("saludos")
+15.-Preparar el archivo3.py para hacer commit
+      $ git commit -m "saludo alumno3"
+      [master 2243734] saludo alumno3
+      1 file changed, 2 insertions(+), 1 deletion(-)
+
+16.-Quita el archivo3.py del area de preparacion
+    $ git restore --staged alumno3.py
+17.-Restaura el archivo3.py descartando los cambios hechos.
+     $ git add alumno3.py
